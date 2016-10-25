@@ -80,7 +80,9 @@
     <ClCompile Include="scpp_assert.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="scpp_array.hpp" />
     <ClInclude Include="scpp_assert.hpp" />
+    <ClInclude Include="scpp_matrix.hpp" />
     <ClInclude Include="scpp_vector.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

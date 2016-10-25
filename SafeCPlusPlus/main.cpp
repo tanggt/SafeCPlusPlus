@@ -1,5 +1,7 @@
 #include <iostream>
-#include "scpp_vector.hpp"
+#include <algorithm>
+
+#include "scpp_matrix.hpp"
 
 using std::cout;
 using std::endl;
@@ -9,16 +11,17 @@ using std::cerr;
 
 int main(int agrc, char ** argv)
 {
-	scpp::vector<int> vect;
-	for (int i = 0; i < 3; i++)
+	scpp::matrix<int> m(2, 3, 99);
+	for (unsigned i = 0; i < m.row(); ++i)
 	{
-		vect.push_back(i);
+		for (unsigned j = 0; j < m.column(); ++j)
+		{
+			cout << m(1, 1);
+			if (m.column() > i + 1)
+				cout << " ";
+		}
+		cout << endl;
 	}
-	
-	cout << "My vector = " << vect << endl;
-	for (unsigned int i = 0; i < vect.size(); ++i)
-	{
-		cout << "Value of vector at " << i << " is " << vect[i] << endl;
-	}
+			
 	return 0;
 }
