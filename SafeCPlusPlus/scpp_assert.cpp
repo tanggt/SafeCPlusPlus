@@ -7,7 +7,7 @@ using std::cerr;
 using std::endl;
 using std::ostringstream;
 
-#ifdef SCPP_THROW_EXCEPTION_ON_BUG
+#ifdef _SCPP_THROW_EXCEPTION_ON_BUG
 namespace scpp
 {
 	ScppAssertFailedException::ScppAssertFailedException(const char *file_name,
@@ -27,7 +27,7 @@ void SCPP_AssertErrorHandler(const char *file_name,
 	unsigned line_number,
 	const char *message)
 {
-#ifdef SCPP_THROW_EXCEPTION_ON_BUG
+#ifdef _SCPP_THROW_EXCEPTION_ON_BUG
 	throw scpp::ScppAssertFailedException(file_name, line_number, message);
 #else
 	cerr << message << " in file " << file_name << " #" << line_number << endl;

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "scpp_assert.hpp"
+#include "scpp_vector.hpp"
 
 using std::cout;
 using std::endl;
@@ -9,21 +9,16 @@ using std::cerr;
 
 int main(int agrc, char ** argv)
 {
-	cout << "Hello,SCPP_Assert" << endl;
-	try
+	scpp::vector<int> vect;
+	for (int i = 0; i < 3; i++)
 	{
-		double stock_price = 100.0;
-		SCPP_ASSERT(stock_price > 0. && stock_price <= 1.e6,
-			"Stock price " << stock_price << " is out range");
-		stock_price = -1.0;
-		SCPP_ASSERT(stock_price > 0. && stock_price <= 1.e6,
-			"Stock price " << stock_price << " is out range");
-	}
-	catch (const exception &ex)
-	{
-		cerr << "Exception caught in " << __FILE__ << " #" << __LINE__ << ":\n"
-			<< ex.what() << endl;
+		vect.push_back(i);
 	}
 	
+	cout << "My vector = " << vect << endl;
+	for (unsigned int i = 0; i < vect.size(); ++i)
+	{
+		cout << "Value of vector at " << i << " is " << vect[i] << endl;
+	}
 	return 0;
 }

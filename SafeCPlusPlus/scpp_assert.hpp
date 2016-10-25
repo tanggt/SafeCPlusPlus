@@ -3,7 +3,7 @@
 
 #include <sstream>
 
-#ifdef SCPP_THROW_EXCEPTION_ON_BUG
+#ifdef _SCPP_THROW_EXCEPTION_ON_BUG
 #include <exception>
 
 namespace scpp
@@ -39,10 +39,10 @@ void SCPP_AssertErrorHandler(const char *file_name,
 	   }
 
 #ifdef _DEBUG
-#define SCPP_TEST_ASSERT_ON
+#define _SCPP_TEST_ASSERT_ON
 #endif
 
-#ifdef SCPP_TEST_ASSERT_ON
+#ifdef _SCPP_TEST_ASSERT_ON
 #define SCPP_TEST_ASSERT(condition, msg) SCPP_ASSERT(condition,msg)
 #else
 #define SCPP_TEST_ASSERT(condition, msg)
