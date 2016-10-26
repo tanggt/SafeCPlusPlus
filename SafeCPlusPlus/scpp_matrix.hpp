@@ -72,4 +72,5 @@ namespace scpp{
 //	}
 //	return os;
 //}
+
 #endif // _SCPP_MATRIX_HPP_INCLUDED_

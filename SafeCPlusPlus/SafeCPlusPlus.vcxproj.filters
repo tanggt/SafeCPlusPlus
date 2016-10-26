@@ -35,5 +35,8 @@
     <ClInclude Include="scpp_matrix.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="scpp_types.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

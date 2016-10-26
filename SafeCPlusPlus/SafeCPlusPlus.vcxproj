@@ -51,7 +51,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;_SCPP_THROW_EXCEPTION_ON_BUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -83,6 +83,7 @@
     <ClInclude Include="scpp_array.hpp" />
     <ClInclude Include="scpp_assert.hpp" />
     <ClInclude Include="scpp_matrix.hpp" />
+    <ClInclude Include="scpp_types.hpp" />
     <ClInclude Include="scpp_vector.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
