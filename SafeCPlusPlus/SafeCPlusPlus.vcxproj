@@ -83,6 +83,7 @@
     <ClInclude Include="scpp_array.hpp" />
     <ClInclude Include="scpp_assert.hpp" />
     <ClInclude Include="scpp_matrix.hpp" />
+    <ClInclude Include="scpp_refcountptr.hpp" />
     <ClInclude Include="scpp_types.hpp" />
     <ClInclude Include="scpp_vector.hpp" />
   </ItemGroup>

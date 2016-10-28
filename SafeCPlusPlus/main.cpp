@@ -1,17 +1,15 @@
 #include <iostream>
-#include <algorithm>
 
-#include "scpp_types.hpp"
+#include "scpp_refcountptr.hpp"
 
 using std::cout;
 using std::endl;
 using std::exception;
 using std::cerr;
 
-
 int main(int agrc, char* argv[])
 {
-	Double d;
-	cout << d << endl;
+	scpp::RefCountPtr<int> p(new int(10));
+	cout << *p << endl;
 	return 0;
 }

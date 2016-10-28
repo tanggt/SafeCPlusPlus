@@ -8,7 +8,7 @@ template <typename T>
 class TNumber
 {
 public:
-	TNumber(const T& x = 0):data_(x){}
+	TNumber(const T& x = 0) :data_(x){}
 
 	operator T() const{ return data_; }
 
@@ -104,4 +104,14 @@ public:
 private:
 	bool data_;
 };
+
+inline std::ostream& operator << (std::ostream& os, Bool b)
+{
+	if (b)
+		os << "True";
+	else
+		os << "False";
+	return os;
+}
+
 #endif  //_SCPP_TYPES_HPP_INCLUDED_
